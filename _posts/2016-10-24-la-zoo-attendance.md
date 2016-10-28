@@ -1,12 +1,9 @@
 ---
-layout: post
+layout: chart
 title:  "L.A. Zoo Attendance"
+source: "https://data.lacity.org/api/views/3gwn-arjr/rows.json?accessType=DOWNLOAD"
 ---
-<h1>L.A. Zoo Attendance</h1>
-
 <div id='viz'></div>
-
-<p>source: <a href='https://data.lacity.org/api/views/3gwn-arjr/rows.json?accessType=DOWNLOAD'>https://data.lacity.org/api/views/3gwn-arjr/rows.json?accessType=DOWNLOAD</a></p>
 
 <script>
   var rawData = [

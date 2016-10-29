@@ -12,7 +12,18 @@
 
 {{ content }}
 
-<p>source: {{ page.source }}</p>
+{% if page.source %}
+<p>source: <a href='{{ page.source }}' target="_blank">{{ page.source }}</a></p>
+{% endif %}
+
+{% if page.sources %}
+<p>sources:</p>
+<ul>
+  {% for item in page.sources %}
+    <li><a href='{{ item }}' target="_blank">{{ item }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
 
 </body>
 </html>

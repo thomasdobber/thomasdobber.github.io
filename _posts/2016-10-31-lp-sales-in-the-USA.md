@@ -1,6 +1,6 @@
 ---
 layout: chart
-title:  LPs sold in the US
+title:  "LPs sold in the US"
 sources:
   - https://en.wikipedia.org/wiki/Vinyl_revival
   - https://www.statista.com/statistics/188822/lp-album-sales-in-the-united-states-since-2009/

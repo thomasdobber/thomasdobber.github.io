@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html lang='en'>
-<head>
-  <meta charset='UTF-8' />
-  <title>{{ site.title }} - {{ page.title }}</title>
-  <script src='{{ site.url }}/js/lodash.js' charset='utf-8'></script>
-  <script src='{{ site.url }}/js/d3.js' charset='utf-8'></script>
-</head>
-<body>
+  <head>
+    <meta charset='UTF-8' />
+    <title>{{ site.title }} - {{ page.title }}</title>
+    <script src='{{ site.url }}/js/lodash.js' charset='utf-8'></script>
+    <script src='{{ site.url }}/js/d3.js' charset='utf-8'></script>
+    <script src='{{ site.url }}/js/moment.js' charset='utf-8'></script>
+  </head>
+  <body>
 
-<h1>{{ page.title }}</h1>
+    <p>
+      <strong><a href='{{ site.url }}' title='go to home page'>{{ site.url }}</a></strong>
+    </p>
 
-{{ content }}
+    <h1>{{ page.title }}</h1>
+    
+    <time datetime="{{ page.date }}">{{ page.date }}</time>
 
-{% if page.source %}
-<p>source: <a href='{{ page.source }}' target="_blank">{{ page.source }}</a></p>
-{% endif %}
+    {{ content }}
 
-{% if page.sources %}
-<p>sources:</p>
-<ul>
-  {% for item in page.sources %}
-    <li><a href='{{ item }}' target="_blank">{{ item }}</a></li>
-  {% endfor %}
-</ul>
-{% endif %}
+    {% if page.source %}
+    <p>source: <a href='{{ page.source }}' target="_blank">{{ page.source }}</a></p>
+    {% endif %}
 
-</body>
+    {% if page.sources %}
+    <p>sources:</p>
+    <ul>
+      {% for item in page.sources %}
+        <li><a href='{{ item }}' target="_blank">{{ item }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <nav>
+      {% if page.previous.url %}
+        <a title="go to previous post" href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+        &nbsp;
+      {% endif %}
+
+      {% if page.next.url %}
+        <a title="go to next post" href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+      {% endif %}
+    </nav>
+
+    <script type='text/javascript'>
+      var times = document.getElementsByTagName('time');
+
+      for(var i = 0; i < times.length; i++) {
+        var time = times[i];
+        var date = time.getAttribute('datetime');
+        var m = moment(date, "YYYY-MM-DD HH:mm:ss Z");
+        var fromNow = m.fromNow();
+
+        time.innerHTML = fromNow;
+      }
+    </script>
+  </body>
 </html>

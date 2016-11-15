@@ -1,7 +1,7 @@
 title: thomasdobber.nl
 baseurl: ""
 url: http://thomasdobber.nl
-permalink: /:title/index.html
+permalink: /:title.html
 markdown: kramdown
 gems:
   - jekyll-feed

@@ -20,17 +20,6 @@
       </ul>
     </nav>
 
-    <script type='text/javascript'>
-      var times = document.getElementsByTagName('time');
-
-      for(var i = 0; i < times.length; i++) {
-        var time = times[i];
-        var date = time.getAttribute('datetime');
-        var m = moment(date, "YYYY-MM-DD HH:mm:ss Z");
-        var fromNow = m.fromNow();
-
-        time.innerHTML = fromNow;
-      }
-    </script>
+    <script src='{{ site.url }}/js/page.js' charset='utf-8'></script>
   </body>
 </html>

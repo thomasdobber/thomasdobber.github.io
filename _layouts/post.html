@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.title }} - {{ page.title }}</title>
-    <script src='{{ site.url }}/js/jquery.js' charset='utf-8'></script>
-    <script src='{{ site.url }}/js/lodash.js' charset='utf-8'></script>
-    <script src='{{ site.url }}/js/d3.js' charset='utf-8'></script>
     <script src='{{ site.url }}/js/moment.js' charset='utf-8'></script>
+
+    {% for item in page.js %}
+    <script src='{{ site.url }}/js/{{ item }}.js' charset='utf-8'></script>
+    {% endfor %}
+
   </head>
   <body>
 

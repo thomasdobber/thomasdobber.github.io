@@ -1,9 +1,11 @@
 ---
-layout: chart
 title:  "LPs sold in the US"
 sources:
   - https://en.wikipedia.org/wiki/Vinyl_revival
   - https://www.statista.com/statistics/188822/lp-album-sales-in-the-united-states-since-2009/
+js:
+  - d3
+  - lodash
 ---
 
 <p>LPs sold in the United States from 1994 to 2015</p>

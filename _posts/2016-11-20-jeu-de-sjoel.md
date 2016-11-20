@@ -1,6 +1,7 @@
 ---
-layout: chart
 title:  "Jeu de Sjoel"
+js:
+  - jquery
 ---
 
 <style>

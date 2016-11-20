@@ -1,5 +1,4 @@
 ---
-layout: chart
 title:  Global LP Sales
 sources:
   - https://en.wikipedia.org/wiki/Vinyl_revival
@@ -9,6 +8,9 @@ sources:
   - https://www.quandl.com/data/WORLDBANK/NLD_SP_POP_TOTL-Netherlands-Population-total
   - http://www.officialcharts.com/chart-news/uk-s-first-official-vinyl-charts-launch-as-vinyl-sales-soar-in-2015__8906/
   - https://www.bpi.co.uk/home/bpi-2015-music-market-report.aspx
+js:
+  - d3
+  - lodash
 ---
 
 An attempt to visualize global LP sales (from 2008 to 2015), showing amount of LPs sold on the Y axis and the population on the X axis.

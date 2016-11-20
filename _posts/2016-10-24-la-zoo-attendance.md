@@ -1,7 +1,9 @@
 ---
-layout: chart
 title:  "LA Zoo Attendance"
 source: https://data.lacity.org/api/views/3gwn-arjr/rows.json?accessType=DOWNLOAD
+js:
+  - d3
+  - lodash
 ---
 <div id='viz'></div>
 

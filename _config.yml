@@ -1,10 +1,17 @@
 title: thomasdobber.nl
 baseurl: ""
 url: http://thomasdobber.nl
-permalink: /:title/index.html
+permalink: /posts/:title/index.html
 markdown: kramdown
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

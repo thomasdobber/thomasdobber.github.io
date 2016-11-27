@@ -1,0 +1,56 @@
+body {
+  margin: 5px;
+}
+
+.site-block {
+  display: inline-block;
+  font-family: futura, sans-serif;
+  font-size: 50px;
+  height: 50px;
+  line-height: 1;
+  margin: 5px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.site-logo {
+  border-radius: 100%;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  width: 50px;
+}
+.site-logo__top,
+.site-logo__bottom {
+  height: 50%;
+}
+.site-logo__top {
+  background: orange;
+}
+.site-logo__bottom {
+  background: beige;
+}
+
+.site-link {
+  border-bottom: 5px solid;
+  color: blue;
+  overflow: hidden;
+  position: relative;
+}
+.site-link__fill {
+  opacity: 0;
+}
+.site-link__overlay {
+  position: absolute;
+}
+.site-link__title {
+  transition: font-size .2s ease-in-out;
+}
+.site-link__sub {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.site-link:hover .site-link__title {
+  font-size: 33px;
+}

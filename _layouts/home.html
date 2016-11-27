@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.title }}</title>
-    <script src='{{ site.url }}/js/moment.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="{{ site.url }}/css/page.css">
+    <script src="{{ site.url }}/js/moment.js" charset="utf-8"></script>
   </head>
   <body>
 
-    <p>
-      <strong>{{ site.url }}</strong>
-    </p>
+    <div class="site-block site-logo">
+      <div class="site-logo__top"></div>
+      <div class="site-logo__bottom"></div>
+    </div>
 
-    <nav>
+    <div class="site-block site-title">
+      {{ site.title }}
+    </div>
+
+    {% for post in site.posts %}
+      <a class="site-block site-link" href="{{ post.url }}" title="go to {{ post.title }}">
+        <div class="site-link__overlay">
+          <div class="site-link__title">
+            {{ post.title }}
+            <!-- &rarr; -->
+          </div>
+          <time class="site-link__sub" datetime="{{ post.date }}">{{ post.date }}</time>
+        </div>
+        <div class="site-link__fill">{{ post.title }}</div>
+      </a>
+    {% endfor %}
+
+    <!-- <nav>
       <ul>
         {% for post in site.posts %}
-          <li><a href='{{ post.url }}' title="go to {{ post.title }}">{{ post.title }}</a> – <time datetime="{{ post.date }}">{{ post.date }}</time></li>
+          <li>
+            <a href="{{ post.url }}" title="go to {{ post.title }}">{{ post.title }}</a>
+            <time datetime="{{ post.date }}">{{ post.date }}</time>
+          </li>
         {% endfor %}
       </ul>
-    </nav>
+    </nav> -->
 
-    <script src='{{ site.url }}/js/page.js' charset='utf-8'></script>
+    <script src="{{ site.url }}/js/page.js" charset="utf-8"></script>
   </body>
 </html>
